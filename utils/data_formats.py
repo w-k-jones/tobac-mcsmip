@@ -169,6 +169,17 @@ OBS = MCS_dataset(
     has_winter=True,
 )
 
+OBSv7 = MCS_dataset(
+    name="OBSv7",
+    time_dim="time",
+    precip_var="precipitation",
+    bt_var="Tb",
+    convert_olr=False,
+    file_prefix="olr_pcp/olr_pcp_",
+    has_summer=True,
+    has_winter=True,
+)
+
 SAM_summer = MCS_dataset(
     name="SAM",
     time_dim="time",
@@ -199,6 +210,17 @@ SCREAM = MCS_dataset(
     convert_olr=True,
     file_prefix="olr_pcp_instantaneous/pr_rlut_scream_",
     has_summer=False,
+    has_winter=True,
+)
+
+SCREAMv1 = MCS_dataset(
+    name="SCREAMv1",
+    time_dim="time",
+    precip_var="precipitation",
+    bt_var="olr",
+    convert_olr=True,
+    file_prefix="olr_pcp_instantaneous/olr_pcp_",
+    has_summer=True,
     has_winter=True,
 )
 
