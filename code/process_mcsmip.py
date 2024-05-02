@@ -114,6 +114,13 @@ def main() -> None:
     if MCS.time_dim != "time":
         ds = ds.rename({MCS.time_dim:"time"})
 
+    if "lat" in ds.coords:
+        if not "standard_name" in ds.lat.attrs:
+            ds.attrs["standard_name"] = "latitude"
+    if "lon" in ds.coords:
+        if not "standard_name" in ds.lon.attrs:
+            ds.attrs["standard_name"] = "longitude"
+    
     if MCS.convert_olr:
         bt = get_tb(ds[MCS.bt_var].compute())
     else:
