@@ -1,0 +1,33 @@
+name: tobac_mcsmip
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - scikit-image
+  - scikit-learn
+  - pandas
+  - xarray
+  - iris
+  - opencv
+  - pyproj
+  - cf_xarray
+  - python-dateutil
+  - satpy
+  - pyspectral
+  - matplotlib
+  - cartopy
+  - ipykernel
+  - libnetcdf<=4.9.1
+  - netcdf4
+  - cython
+  - trackpy
+  - black
+  - pytest
+  - typing_extensions
+  - numba
+  - dask
+  - pip
+  - pip:
+     - "--editable=git+https://github.com/w-k-jones/tobac.git@mcsmip_1.5.3#egg=tobac"
